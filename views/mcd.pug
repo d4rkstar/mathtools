@@ -1,0 +1,17 @@
+html
+    head
+        title Massimo Comune Divisore
+    body
+        h1 Massimo Comune Divisore
+        form(action="/mathtools/calcolo" method="POST")
+            p Valori di ingresso:
+                input(type="text" name="numeri" placeholder="Inserire numeri separati da virgola")
+
+            input(type="submit")
+
+            if error!=''
+                p(style="color: red")= error
+
+        ul
+            li
+                a(href="/") Elenco iniziale

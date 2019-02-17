@@ -1,0 +1,17 @@
+html
+    head
+        title Verifica numeri primi
+    body
+        h1 Verifica numeri primi
+        form(action="/numeri-primi/verifica" method="POST")
+            p Valori di ingresso:
+                input(type="text" name="numero" placeholder="Inserire numero da verificare")
+
+            input(type="submit")
+
+            if error!=''
+                p(style="color: red")= error
+
+        ul
+            li
+                a(href="/") Elenco iniziale
