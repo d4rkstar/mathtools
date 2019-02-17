@@ -68,11 +68,11 @@ class App {
             });
         });
 
-        router.get('/mathtools', (req,res)=>{
+        router.get('/mcd', (req,res)=>{
             res.render('mcd');
         });
 
-        router.post('/mathtools/calcolo', (req,res)=> {
+        router.post('/mcd/calcolo', (req,res)=> {
 
             let numeri = req.body.numeri;
 
@@ -98,7 +98,7 @@ class App {
             let risultato = mcd.mcd(numeri);
 
 
-            res.render('mathtools-risultato', {
+            res.render('mcd-risultato', {
                 risultato: risultato
             });
         });
