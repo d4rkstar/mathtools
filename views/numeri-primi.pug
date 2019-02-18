@@ -1,17 +1,14 @@
-html
-    head
-        title Verifica numeri primi
-    body
-        h1 Verifica numeri primi
-        form(action="/numeri-primi/verifica" method="POST")
-            p Valori di ingresso:
-                input(type="text" name="numero" placeholder="Inserire numero da verificare")
+extends layout
 
-            input(type="submit")
+block content
+    h1 Verifica numeri primi
+    form(action="/numeri-primi/verifica" method="POST")
 
-            if error!=''
-                p(style="color: red")= error
+        div.input-group
+            label(class="control-label") Valori di input
+            input(class="form-control" type="text" name="numero" placeholder="Inserire numero da verificare")
 
-        ul
-            li
-                a(href="/") Elenco iniziale
+            if error !== ''
+                .help-block.has-error #{error}
+
+        button(class="btn btn-primary",type="submit") Calcola

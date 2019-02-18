@@ -1,12 +1,9 @@
-html
-    head
-        title Verifica Numero Primo
-    body
-        h1 Verifica Numero Primo
+extends layout
+
+block content
+    h1 Verifica Numero Primo
+
+    figure(class="highlight")
         p Risultato = #{risultato}
 
-        ul
-            li
-                a(href="/numeri-primi") Nuova elaborazione
-            li
-                a(href="/") Elenco iniziale
+    a.btn.btn-primary(href="/numeri-primi") Nuova elaborazione

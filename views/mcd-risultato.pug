@@ -1,13 +1,10 @@
-html
-    head
-        title Massimo Comune Divisore
-    body
-        h1 Massimo Comune Divisore
+extends layout
+
+block content
+    h1 Massimo Comune Divisore
+
+    figure(class="highlight")
         p Elaborato #{risultato.elaborato ? 'Si' : 'No'}
         p MCD(#{risultato.numeriPartenza})= (#{risultato.stringaFinale}) = #{risultato.mcd}
 
-        ul
-            li
-                a(href="/mcd") Nuova elaborazione
-            li
-                a(href="/") Elenco iniziale
+    a.btn.btn-primary(href="/mcd") Nuova elaborazione

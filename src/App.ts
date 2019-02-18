@@ -21,6 +21,8 @@ class App {
             extended: true
         }));
 
+        this.express.use('/static', express.static('./public'));
+
         this.express.set("views", "./views");
         this.express.set('view engine', 'pug');
 

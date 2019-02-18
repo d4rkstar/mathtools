@@ -1,0 +1,31 @@
+extends ../node_modules/pug-bootstrap/_bootstrap
+
+append styles
+    link(rel="stylesheet",href="/static/css/style.css")
+
+append head
+    script(async,defer,src="https://buttons.github.io/buttons.js")
+
+block body
+    +navbar-fixed("Math Tools")
+    .container
+        .row
+            .col-md-3
+                +nav-stacked([{text:"Home",href:"/"},{text:"Massimo Comune Divisore",href:"/mcd"},{text:"Numeri Primi",href:"/numeri-primi"}])
+
+                br
+
+                a(class="github-button",
+                    href="https://github.com/d4rkstar/mathtools/fork",
+                    data-icon="octicon-repo-forked", data-size="large",
+                    data-show-count="true",
+                    aria-label="Fork d4rkstar/mathtools on GitHub") Fork
+
+
+            .col-md-9
+                block content
+                    .h1 Scegli elemento
+
+    footer.footer
+        .container
+            p.text-muted
