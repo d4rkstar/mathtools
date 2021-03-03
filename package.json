@@ -18,7 +18,7 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-winston": "^3.1.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-bootstrap": "0.0.15",
     "underscore": "^1.9.1",
     "winston": "^3.2.1"
